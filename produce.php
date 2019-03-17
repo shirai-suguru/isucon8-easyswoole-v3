@@ -47,7 +47,7 @@ return [
         'charset'       => 'utf8mb4',
         'password'      => 'isucon',
         'database'      => 'torb',
-        'POOL_MAX_NUM'  => '10',
-        'POOL_TIME_OUT' => '0.1'
+        'POOL_MAX_NUM'  => '20',
+        'POOL_TIME_OUT' => '10'
     ],
 ];
