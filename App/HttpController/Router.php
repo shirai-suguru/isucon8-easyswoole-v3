@@ -11,7 +11,7 @@ class Router extends \EasySwoole\Http\AbstractInterface\AbstractRouter
     public function initialize(RouteCollector $routeCollector)
     {
         $routeCollector->get('/initialize', function (Request $request, Response $response) {
-            exec('./db/init.sh');
+            exec(EASYSWOOLE_ROOT . '/db/init.sh');
 
             $response->withStatus(204);
             $response->end();

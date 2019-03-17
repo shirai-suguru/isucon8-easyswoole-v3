@@ -210,7 +210,7 @@ class Index extends BaseController
             return $this->res_error('invalid_event', 404);
         }
     
-        if (!$this->validate_rank($db, $rank)) {
+        if (!$this->validate_rank($rank)) {
             return $this->res_error('invalid_rank', 400);
         }
 
