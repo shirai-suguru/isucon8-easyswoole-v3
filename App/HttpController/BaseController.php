@@ -107,7 +107,10 @@ abstract class BaseController extends Controller
     protected function select_all(string $query, array $params = []): array
     {
         $ret = $this->db->rawQuery($query, $params);
-        return $ret ?? [];
+        if ($ret === false) {
+            $ret = [];
+        }
+        return $ret;
     }
 
     protected function lastInsertId()
